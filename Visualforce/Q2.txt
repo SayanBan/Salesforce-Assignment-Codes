@@ -1,0 +1,22 @@
+**Apex Visual Force page**
+
+<apex:page controller="DataTable" >
+<apex:sectionHeader title="Account List"/>
+<apex:form >
+<apex:dataTable value="{!accountList}" var="a">
+<apex:facet name="header">Account Name</apex:facet>
+<apex:column value="{!a.Name}"></apex:column>
+</apex:dataTable>
+</apex:form>
+</apex:page>
+
+**Apex class**
+
+public class DataTable {
+	public list<Account> accountList{ get;set;
+}
+		public DataTable(){
+			accountList = new list<Account>();
+			accountList = [SELECT id,name FROM Account LIMIT 100];
+		}
+}
