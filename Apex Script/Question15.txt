@@ -1,0 +1,12 @@
+public class fibonacci {
+public static void fibo() {
+        integer i,j,k,l,m;
+		i=j=1;
+        for(l=1;l<=7;l++)
+        {	system.debug(i);
+         	k=i+j;
+         	i=j;
+         	j=k;
+        }
+}
+}
