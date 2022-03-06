@@ -1,0 +1,10 @@
+public class ascendingorder {
+    public static void ascend() {
+        Account[] acc = [SELECT Name FROM Account ORDER BY Name ASC ] ;
+        for(integer i=0;i<acc.size();i++)
+        {	Account a=acc[i];
+
+			system.debug('++++++++'+a.Name);
+        }
+}
+}
