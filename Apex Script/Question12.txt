@@ -1,0 +1,12 @@
+public class PrintContact {
+    public static void pContact() {
+        list<contact> conlist = [SELECT FirstName,LastName FROM Contact WHERE FirstName!=Null ];
+        for(Contact con : conlist)
+        {	String fName=con.FirstName.substring(0,1).capitalize();
+         	fName+=con.FirstName.substring(1,con.FirstName.length());
+         	String lName=con.LastName.substring(0,1).capitalize();
+         	lName+=con.LastName.substring(1,con.LastName.length());
+         	system.debug('FirstName: ' + fName + 'LastName: ' + lName);
+        }
+	}
+}
