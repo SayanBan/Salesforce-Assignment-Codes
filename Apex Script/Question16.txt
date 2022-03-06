@@ -1,0 +1,12 @@
+public class integerreverse {
+public static void intrev() {
+        integer n = 12345, reverse = 0;
+		while( n != 0 ){
+        reverse = reverse * 10;
+        reverse = reverse + math.mod(n,10);
+        n = n/10;
+        }
+        n = reverse;
+        system.debug('Reverse of entered number is '+ n);
+}
+}
