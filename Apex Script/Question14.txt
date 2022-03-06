@@ -1,0 +1,22 @@
+public class stringreverse {
+public static void reverse() {
+        List<Account> AccountList = [select Name from Account limit 1];
+    	List<string> reverseList = new List<string>();
+    	String nameToBeReversed='' ;
+    	for(Account acc: AccountList){
+        String test = acc.Name;
+        System.debug('account name++++++++++++'+acc.Name);    
+        for (integer i = test.length(); i > =0; --i) {
+            if(test.substring(i).length() >1){
+                system.debug(test.substring(i).substring(0,1));
+                nameToBeReversed+=test.substring(i).substring(0,1);
+            }
+            else
+            {
+                nameToBeReversed+=test.substring(i);
+            }
+        }
+        }
+    system.debug('####################'+nameToBeReversed);
+}
+}
