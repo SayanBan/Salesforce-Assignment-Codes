@@ -1,0 +1,2 @@
+user u = [Select MobilePhone, Name, Email from user where id =: UserInfo.getUserId() ];
+system.debug(' '+u.MobilePhone+' '+u.Name+' '+u.Email);
