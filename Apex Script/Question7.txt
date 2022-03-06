@@ -1,0 +1,12 @@
+public class UpdateAllFOpportunity {
+    public static void updateOpp() {
+        LIST<opportunity> oppList=[SELECT Name,CloseDate FROM Opportunity WHERE CloseDate>TODAY];
+        LIST<opportunity> oppList1=new LIST<opportunity>();
+        for(Opportunity opp:oppList){
+        opp.Name=opp.Name+'F';
+        oppList1.add(opp);
+        system.debug('++++++++'+opp);
+        }
+        update oppList;
+    }
+}
